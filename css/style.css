@@ -19,6 +19,20 @@ body {
 /* Multiple Pages */
 .form-btn {
   text-align: center;
+  padding-bottom: 20px;
+}
+
+.title-colourgraph h3 {
+  margin-top: 0px;
+}
+
+.header-title {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.tabs-title {
+  vertical-align: bottom;
 }
 
 /* Index/home page */
@@ -84,15 +98,6 @@ header.carousel .fill {
 .calendar-box {
   border: 5px solid black;
   height: 200px;
-}
-
-.dash-title {
-  display: inline-block;
-  vertical-align: middle;
-}
-
-.dash-h3 h3 {
-  margin-top: 0px;
 }
 
 

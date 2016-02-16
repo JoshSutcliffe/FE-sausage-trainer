@@ -44,12 +44,19 @@
 
   </nav>
 
-  <!-- Find a background photo of a class, add opacity to it. Have the form on top of it -->
   <div class="container">
-
-    <h1>Add full screen calendar here</h1>
-
+    <h1>{{ Class Name }}</h1>
+    <hr class="colorgraph">
+    <h3>{{ Date }}</h3>
+    <h3>Class Description</h3>
+    <p>{{ class description }}</p>
+    <h3>Current attendees</h3>
+    <p>{{ attendees - number and list }}</p>
+    <h3>Current fees: {{ cost * current attendees }}</h3>
+    <button>Edit this class</button>
+    <button>Delete this class</button>
   </div>
+  
 
 </body>
 </html>

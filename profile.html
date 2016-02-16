@@ -44,10 +44,56 @@
 
   </nav>
 
-  <!-- Find a background photo of a class, add opacity to it. Have the form on top of it -->
   <div class="container">
+    <div class="dash-title">
+      <img src="http://placehold.it/140x100" alt="" class="avatar">
+      <h1 class="header-title">{{ trainer name }}</h1>
+    </div>
 
-    <h1>Add full screen calendar here</h1>
+    <hr class="colorgraph">
+
+    <div class="container-fluid">
+
+      <div class="row title-colourgraph">
+        <h3>About {{ trainer name }}</h3>
+        <div class="title-colourgraph col-xs-12 col-md-9">
+          <p class="calendar-box col-xs-12">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio, dignissimos voluptates facilis minus pariatur, incidunt architecto aut repellat sunt tempora non facere nobis dolorem! Sunt cupiditate tenetur, suscipit velit autem.</p>
+        </div>
+
+        <!-- Calendar Here -->
+        <div class="calendar-box col-xs-12 col-md-3">
+          <p>Integrate calendar here </p>
+        </div>
+
+      </div>    
+
+    </div>
+    
+        <h3>{{trainer name}}'s Upcoming Classes</h3>
+        <div class="table-responsive col-xs-12">
+          <div class="row">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th class="col-xs-3 col-md-3">Date</th>
+                  <th class="col-xs-4 col-md-4">Class</th>
+                  <th class="col-xs-5 col-md-5">Location</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th>{{ date }}</th>
+                  <th><a href="class_show">{{ class name }}</a></th>
+                  <th>{{ location }}</th>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
 
   </div>
 

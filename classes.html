@@ -44,10 +44,51 @@
 
   </nav>
 
-  <!-- Find a background photo of a class, add opacity to it. Have the form on top of it -->
   <div class="container">
+    <div class="dash-title">
+      <img src="http://placehold.it/140x100" alt="" class="avatar">
+      <h1 class="header-title">Your Classes</h1>
+    </div>
+    
+    <hr class="colorgraph">
 
-    <h1>Add full screen calendar here</h1>
+    <div class="container-fluid">
+
+      <div class="row">
+
+        <div class="title-colourgraph table-responsive col-xs-12">
+          <h3>All Classes</h3>
+          <!-- Confirmed classes -->  
+          <div class="table-responsive col-xs-12 col-md-12">
+
+            <div class="row">
+              <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th class="col-xs-2">Date</th>
+                    <th class="col-xs-3">Class</th>
+                    <th class="col-xs-3">Location</th>
+                    <th class="col-xs-2">Status</th>
+                    <th class="col-xs-2">Places Left</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th>{{ date }}</th>
+                    <th><a href="trainer_show">{{ class name }}</a></th>
+                    <th>{{ location }}</th>
+                    <th>{{ status }}</th>
+                    <th>{{ places left }}</th>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>      
+
+      </div>
+    
+    </div>
 
   </div>
 
