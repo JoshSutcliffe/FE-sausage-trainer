@@ -35,6 +35,10 @@ body {
   vertical-align: bottom;
 }
 
+.center-align {
+  text-align: center;
+}
+
 /* Index/home page */
 .img-portfolio {
     margin-bottom: 30px;

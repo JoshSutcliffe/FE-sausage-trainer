@@ -48,20 +48,60 @@
   </nav>
 
   <div class="container">
-    <h1>{{ Class Name }}</h1>
+    <div class="dash-title">
+      <img src="http://placehold.it/140x100" alt="" class="avatar">
+      <h1 class="header-title">Your Profile - Students</h1>
+      <ul class="nav nav-tabs navbar-right tabs-title">
+        <li role="presentation" class="active"><a href="#">Classes</a></li>
+        <li role="presentation"><a href="#">Calendar</a></li>
+        <li role="presentation"><a href="#">Contacts</a></li>
+      </ul>
+    </div>
+    
     <hr class="colorgraph">
-    <h3>{{ Date }}</h3>
-    <h3>Location</h3>
-    <p>{{ location }}</p>
-    <h3>Class Description</h3>
-    <p>{{ class description }}</p>
-    <h3>Current attendees</h3>
-    <p>{{ attendees - number and list }}</p>
-    <h3>Current fees: {{ cost * current attendees }}</h3>
-    <button>Edit this class</button>
-    <button>Delete this class</button>
+
+    <div class="container-fluid">
+
+      <div class="row">
+
+        <div class="title-colourgraph col-xs-12 col-sm-12 col-md-9">
+          <h1>Space for new homepage functionality</h1>
+        </div>
+
+        <!-- Calendar Here -->
+        <div class="calendar-box col-xs-12 col-sm-12 col-md-3">
+          <p>Integrate calendar here </p>
+        </div>        
+
+      </div>
+
+      <h3>Next Classes</h3>
+      <!-- Confirmed classes -->  
+      <div class="table-responsive col-xs-12 col-md-12">
+
+        <div class="row">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th class="col-xs-3 col-md-3">Date</th>
+                <th class="col-xs-4 col-md-4">Class</th>
+                <th class="col-xs-5 col-md-5">Location</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>{{ date }}</th>
+                <th><a href="trainer_show">{{ class name }}</a></th>
+                <th>{{ location }}</th>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    
+    </div>
+
   </div>
-  
 
 </body>
 </html>
