@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <title>Document</title>
-  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <link href="font-awesome.min.css" rel="stylesheet" type="text/css">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/style.css">
   
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
@@ -51,40 +51,41 @@
       <div class="row">
         <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-6 col-sm-offset-2 col-md-offset-3">
           <form>
-            <h2>Sign Up</h2>
-            <h4>Already have an account? Login <a href="">here</a></h4>
+            <h2>Edit {{ Class name }}</h2>
             <hr class="colorgraph">
             <div class="row">
               <div class="form-group">
-                <label for="">Username</label>
-                <input placeholder="Required" class="form-control input-lg">
+                <label for="">Class Name</label>
+                <input placeholder="{{ Class name }}" class="form-control input-lg">
               </div>
               <div class="form-group">
-                <label for="">Email</label>
-                <input placeholder="Required" class="form-control input-lg">
+                <label for="">Start Time</label>
+                <input type="datetime-local" class="form-control input-lg">
               </div>
               <div class="form-group">
-                <label for="">Password</label>
-                <input placeholder="Required" class="form-control input-lg">
+                <label for="">Duration</label>
+                <input type="number" placeholder="{{ duration }}m" class="form-control input-lg">
               </div>
               <div class="form-group">
-                <label for="">Password Confirmation</label>
-                <input placeholder="Required" class="form-control input-lg">
+                <label for="">Class Description</label>
+                <input placeholder="{{ class description }}" class="form-control input-lg">
               </div>
               <div class="form-group">
-                <label>Add a photo</label>
-                <input type="file">
+                <label for="">//Add the payment details here</label>
+                <input placeholder="//Add the payment details here" class="form-control input-lg">
               </div>
-              <div class="btn-group-verical" role="group">
-                <label for="">Select those that apply to you: </label>
-                <input type="checkbox">  I am an instructor
-                <input type="checkbox">  I am a student
+              <div class="form-group">
+                <label>Do we want this? should we write logic to not show it if its a confirmed class?</label>
+                <select name="class-status" id="class-status">
+                  <option value="proposed-class">Proposed class</option>
+                  <option value="confirmed-class">Confirmed class</option>
+                </select>
               </div>
             </div>
 
             <hr class="colorgraph">
             <div class="row form-btn">
-              <div class="col-xs-12 col-md-6 col-md-offset-3"><button>Sign Up</button></div>
+              <div class="col-xs-12 col-md-6 col-md-offset-3"><button>Make Changes</button></div>
             </div>
           </form>
         </div>
@@ -92,6 +93,6 @@
     </div>
 
   </div>
-  
+
 </body>
 </html>
