@@ -39,6 +39,10 @@ body {
   text-align: center;
 }
 
+.nav-tabs {
+  margin-top: 20px;
+} 
+
 /* Index/home page */
 .img-portfolio {
     margin-bottom: 30px;

@@ -47,7 +47,6 @@
 
   </nav>
 
-  <!-- Find a background photo of a class, add opacity to it. Have the form on top of it -->
   <div class="container">
 
     <div class="sign-up-form-box">
@@ -62,8 +61,13 @@
                 <input placeholder="{{ Class name }}" class="form-control input-lg">
               </div>
               <div class="form-group">
-                <label for="">Start Time</label>
-                <input type="datetime-local" class="form-control input-lg">
+                <label for="Date">Date & Time</label>
+                <div class='input-group date' id='datetimepicker1'>
+                  <input type='text' class="form-control input-lg">
+                  <span class="input-group-addon">
+                    <span class="glyphicon glyphicon-calendar"></span>
+                  </span>
+                </div>
               </div>
               <div class="form-group">
                 <label for="">Duration</label>
@@ -103,6 +107,13 @@
     </div>
 
   </div>
+
+  <script type="text/javascript">
+  // js to make the date and time picker work on new_class and edit_class
+    $(function () {
+      $('#datetimepicker1').datetimepicker();
+    });
+  </script>
 
 </body>
 </html>
