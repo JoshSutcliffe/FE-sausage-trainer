@@ -5,7 +5,7 @@
   <title>Sausage Trainer</title>
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-  <link href="font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="css/style.css">
   <link href="https://cdn.rawgit.com/Eonasdan/bootstrap-datetimepicker/e8bddc60e73c1ec2475f827be36e1957af72e2ea/build/css/bootstrap-datetimepicker.css" rel="stylesheet">
   
@@ -48,14 +48,34 @@
   </nav>
 
   <div class="container">
-    <div class="dash-title">
-      <img src="http://placehold.it/140x100" alt="" class="avatar">
-      <h1 class="header-title">Your Classes</h1>
+
+    <div class="sign-up-form-box">
+      <div class="row">
+        <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-6 col-sm-offset-2 col-md-offset-3">
+          <form>
+            <h2>Message {{ instructor name }}</h2>
+            <hr class="colorgraph">
+            <div class="row">
+              <div class="form-group">
+                <label for="">Email Title</label>
+                <input placeholder="Required" class="form-control input-lg">
+              </div>
+              <div class="form-group">
+                <label for="">Enter Message</label>
+                <textarea class="form-control input-lg" rows="6" placeholder="Write your message to {{ instructor name }}"></textarea>
+              </div>
+            </div>
+
+            <hr class="colorgraph">
+            <div class="row form-btn">
+              <div class="col-xs-12 col-md-6 col-md-offset-3 form-btn"><button>Send Message</button></div>
+            </div>
+          </form>
+        </div>
+      </div>
     </div>
-    
-    <hr class="colorgraph">
 
   </div>
-
+  
 </body>
 </html>

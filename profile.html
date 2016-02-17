@@ -5,7 +5,7 @@
   <title>Sausage Trainer</title>
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-  <link href="font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="css/style.css">
   <link href="https://cdn.rawgit.com/Eonasdan/bootstrap-datetimepicker/e8bddc60e73c1ec2475f827be36e1957af72e2ea/build/css/bootstrap-datetimepicker.css" rel="stylesheet">
   
@@ -60,7 +60,14 @@
       <div class="row title-colourgraph">
         <h3>About {{ trainer name }}</h3>
         <div class="title-colourgraph col-xs-12 col-md-9">
-          <p class="calendar-box col-xs-12">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio, dignissimos voluptates facilis minus pariatur, incidunt architecto aut repellat sunt tempora non facere nobis dolorem! Sunt cupiditate tenetur, suscipit velit autem.</p>
+          <div class="profile-bio-box col-xs-12">
+            <h3>{{ trainers name }}'s' Bio</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio, dignissimos voluptates facilis minus pariatur, incidunt architecto aut repellat sunt tempora non facere nobis dolorem! Sunt cupiditate tenetur, suscipit velit autem.</p>
+          </div>
+          <div class="profile-button">
+            <button href="message_trainer.html">Message {{ instructor name }}</button>
+            <button>&#9734; Follow</button>
+          </div>
         </div>
 
         <!-- Calendar Here -->
