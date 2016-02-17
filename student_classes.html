@@ -62,22 +62,28 @@
 
     <div class="container-fluid">
 
-      <div class="row">
+      <div class="table-responsive col-xs-12 col-md-12">
 
-        <div class="title-colourgraph table-responsive col-xs-12">
-          <h3>All Classes</h3>
-          <!-- Confirmed classes -->  
-          <div class="table-responsive col-xs-12 col-md-12">
-
-            <div class="row">
-              <table class="table table-striped">
-                <thead>
- 
-              </table>
-            </div>
-          </div>
-        </div>      
-
+        <div class="row">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th class="col-xs-2">Date</th>
+                <th class="col-xs-3">Class</th>
+                <th class="col-xs-3">Instructor</th>
+                <th class="col-xs-4">Location</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>{{ date }}</th>
+                <th><a href="student_show.html">{{ class name }}</a></th>
+                <th><a href="profile.html">{{ instructor name }}</a></th>
+                <th>{{ location }}</th>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
     
     </div>
