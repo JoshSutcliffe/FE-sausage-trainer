@@ -16,6 +16,32 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.11.2/moment.min.js"></script>
   <script src="js/fullcalendar.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.15.35/js/bootstrap-datetimepicker.min.js"></script>
+
+  <script>
+
+  $(document).ready(function() {
+
+    $('#calendar').fullCalendar({
+      theme: true,
+      header: {
+        left: 'prev,next today',
+        center: 'title',
+        right: 'month,agendaWeek,agendaDay'
+      },
+      defaultDate: '2016-01-12',
+      editable: true,
+      eventLimit: true, // allow "more" link when too many events
+      events: [
+        {
+          title: 'All Day Event',
+          start: '2016-01-01'
+        }
+      ]
+    });
+  });
+
+  </script>
+
 </head>
 <body>
   <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -61,6 +87,42 @@
         <li role="presentation"><a href="#">Calendar</a></li>
         <li role="presentation"><a href="view_all_students.html">Contacts</a></li>
       </ul>
+    </div>
+
+    <hr class="colorgraph">
+
+    <div class="container-fluid">
+      <div class="cal-fp col-12">
+        <div class="row">
+          <div id="calendar" class="col-xs-12 col-md-10 col-md-offset-1">
+          </div>
+        </div>
+      </div>
+        
+    </div>
+
+    <h3>Upcoming Classes</h3>
+    <!-- Confirmed classes -->  
+    <div class="table-responsive col-xs-12 col-md-12">
+
+      <div class="row">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th class="col-xs-3 col-md-3">Date</th>
+              <th class="col-xs-4 col-md-4">Class</th>
+              <th class="col-xs-5 col-md-5">Location</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>{{ date }}</th>
+              <th><a href="trainer_show">{{ class name }}</a></th>
+              <th>{{ location }}</th>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
 
   </div>

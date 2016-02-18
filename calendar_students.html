@@ -16,8 +16,113 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.11.2/moment.min.js"></script>
   <script src="js/fullcalendar.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.15.35/js/bootstrap-datetimepicker.min.js"></script>
+
+  <!-- default entries into calendar - has to have something inside it for it to show it -->
+  <script>
+
+  $(document).ready(function() {
+
+    $('#calendar').fullCalendar({
+      theme: true,
+      header: {
+        left: 'prev,next today',
+        center: 'title',
+        right: 'month,agendaWeek,agendaDay'
+      },
+      defaultDate: '2016-01-12',
+      editable: true,
+      eventLimit: true, // allow "more" link when too many events
+      events: [
+        {
+          title: 'All Day Event',
+          start: '2016-01-01'
+        }
+      ]
+    });
+  });
+
+  </script>
 </head>
 <body>
+
+  <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">Sausage Trainers</a>
+      </div>
+
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a href="">Home</a>
+          </li>
+          <li>
+            <a href="">About</a>
+          </li>
+          <li>
+            <a href="services.html"><span class="glyphicon glyphicon-user"></span> Login</a>
+          </li>
+          <li>
+            <a href="contact.html"><span class="glyphicon glyphicon-log-in"></span> Sign Up</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="dash-title">
+      <img src="http://placehold.it/140x100" alt="" class="avatar">
+      <h1 class="header-title">Your Calendar- Students</h1>
+      <ul class="nav nav-tabs navbar-right tabs-title">
+        <li role="presentation" class="active"><a href="classes.html">Classes</a></li>
+        <li role="presentation"><a href="calendar_trainers.html">Calendar</a></li>
+        <li role="presentation"><a href="view_all_students.html">Contacts</a></li>
+      </ul>
+    </div>
+
+    <hr class="colorgraph">
+
+    <div class="container-fluid">
+      <div class="cal-fp col-12">
+        <div class="row">
+          <div id="calendar" class="col-xs-12 col-md-10 col-md-offset-1">
+          </div>
+        </div>
+      </div>
+        
+    </div>
+
+    <h3>Your Classes</h3>
+    <!-- Confirmed classes -->  
+    <div class="table-responsive col-xs-12 col-md-12">
+
+      <div class="row">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th class="col-xs-3 col-md-3">Date</th>
+              <th class="col-xs-4 col-md-4">Class</th>
+              <th class="col-xs-5 col-md-5">Location</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>{{ date }}</th>
+              <th><a href="trainer_show">{{ class name }}</a></th>
+              <th>{{ location }}</th>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>  
   
 </body>
 </html>
