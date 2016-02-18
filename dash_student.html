@@ -16,6 +16,33 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.11.2/moment.min.js"></script>
   <script src="js/fullcalendar.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.15.35/js/bootstrap-datetimepicker.min.js"></script>
+
+  <!-- default entries into calendar - has to have something inside it for it to show it -->
+  <script>
+
+  $(document).ready(function() {
+
+    $('#calendar').fullCalendar({
+      theme: true,
+      header: {
+        left: 'prev,next today',
+        center: 'title',
+        right: 'month,agendaWeek,agendaDay'
+      },
+      defaultDate: '2016-01-12',
+      editable: true,
+      eventLimit: true, // allow "more" link when too many events
+      events: [
+        {
+          title: 'All Day Event',
+          start: '2016-01-01'
+        }
+      ]
+    });
+  });
+
+  </script>
+
 </head>
 <body>
   <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -53,9 +80,9 @@
   <div class="container">
     <div class="dash-title">
       <img src="http://placehold.it/140x100" alt="" class="avatar">
-      <h1 class="header-title">Your Profile - Students</h1>
+      <h1 class="header-title">Your Dash - Students</h1>
       <ul class="nav nav-tabs navbar-right tabs-title">
-        <li role="presentation" class="active"><a href="student_classes.html">Classes</a></li>
+        <li role="presentation" class="active"><a href="classes.html">Classes</a></li>
         <li role="presentation"><a href="calendar_students.html">Calendar</a></li>
         <li role="presentation"><a href="followed_instructors.html">Followed Instructors</a></li>
       </ul>
@@ -67,40 +94,37 @@
 
       <div class="row">
 
-        <div class="title-colourgraph col-xs-12 col-sm-12 col-md-9">
+        <div id="calendar" class="col-xs-12 col-sm-4"></div>
+
+        <div class="title-colourgraph col-xs-12 col-sm-8">
           <h1>Space for new homepage functionality</h1>
+        </div>      
+
+        <!-- upcoming classes -->  
+        <div class="table-responsive pull-right col-xs-12 col-sm-7">
+
+          <div class="row">
+            <h3>Next Classes</h3>
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th class="col-xs-3 col-md-3">Date</th>
+                  <th class="col-xs-4 col-md-4">Class</th>
+                  <th class="col-xs-5 col-md-5">Location</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th>{{ date }}</th>
+                  <th><a href="student_show">{{ class name }}</a></th>
+                  <th>{{ location }}</th>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
 
-        <!-- Calendar Here -->
-        <div class="calendar-box col-xs-12 col-sm-12 col-md-3">
-          <p>Integrate calendar here </p>
-        </div>        
-
-      </div>
-
-      <h3>Next Classes</h3>
-      <!-- Confirmed classes -->  
-      <div class="table-responsive col-xs-12 col-md-12">
-
-        <div class="row">
-          <table class="table table-striped">
-            <thead>
-              <tr>
-                <th class="col-xs-3 col-md-3">Date</th>
-                <th class="col-xs-4 col-md-4">Class</th>
-                <th class="col-xs-5 col-md-5">Location</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th>{{ date }}</th>
-                <th><a href="trainer_show">{{ class name }}</a></th>
-                <th>{{ location }}</th>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
+      </div> 
     
     </div>
 

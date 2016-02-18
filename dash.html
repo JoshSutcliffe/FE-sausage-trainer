@@ -80,7 +80,7 @@
   <div class="container">
     <div class="dash-title">
       <img src="http://placehold.it/140x100" alt="" class="avatar">
-      <h1 class="header-title">Your Profile- Trainers</h1>
+      <h1 class="header-title">Your Dash - Trainers</h1>
       <ul class="nav nav-tabs navbar-right tabs-title">
         <li role="presentation" class="active"><a href="classes.html">Classes</a></li>
         <li role="presentation"><a href="calendar_trainers.html">Calendar</a></li>
@@ -94,39 +94,37 @@
 
       <div class="row">
 
-        <div class="title-colourgraph col-xs-12 col-sm-12 col-md-9">
+        <div id="calendar" class="col-xs-12 col-sm-4"></div>
+
+        <div class="title-colourgraph col-xs-12 col-sm-8">
           <h1>Space for new homepage functionality</h1>
+        </div>      
+
+        <!-- upcoming classes -->  
+        <div class="table-responsive pull-right col-xs-12 col-sm-7">
+
+          <div class="row">
+            <h3>Next Classes</h3>
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th class="col-xs-3 col-md-3">Date</th>
+                  <th class="col-xs-4 col-md-4">Class</th>
+                  <th class="col-xs-5 col-md-5">Location</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th>{{ date }}</th>
+                  <th><a href="trainer_show">{{ class name }}</a></th>
+                  <th>{{ location }}</th>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
 
-        <!-- Calendar Here -->
-        <div id="calendar" class="col-xs-12 col-sm-12 col-md-3">
-        </div>        
-
-      </div>
-
-      <h3>Next Classes</h3>
-      <!-- Confirmed classes -->  
-      <div class="table-responsive col-xs-12 col-md-9">
-
-        <div class="row">
-          <table class="table table-striped">
-            <thead>
-              <tr>
-                <th class="col-xs-3 col-md-3">Date</th>
-                <th class="col-xs-4 col-md-4">Class</th>
-                <th class="col-xs-5 col-md-5">Location</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th>{{ date }}</th>
-                <th><a href="trainer_show">{{ class name }}</a></th>
-                <th>{{ location }}</th>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
+      </div> 
     
     </div>
 
